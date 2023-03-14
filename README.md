@@ -1,7 +1,7 @@
 # devops-aspnet-core-github-workflow-v2a
 Repository for Dev Ops Class 
 
-# Steps to ecexute
+# Steps to Execute
 
 Git Pull / Push
 
