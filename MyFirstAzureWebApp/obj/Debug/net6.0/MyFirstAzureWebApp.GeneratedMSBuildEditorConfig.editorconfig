@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = F:\00-G-Drive-Data\Phd\01. Courses\26. DevOps MS SP2023\Basharat-SP2023\Src\V2a\devops-aspnet-core-github-workflow-v2a\MyFirstAzureWebApp
 build_property._RazorSourceGeneratorDebug = 
 
+[F:/00-G-Drive-Data/Phd/01. Courses/26. DevOps MS SP2023/Basharat-SP2023/Src/V2a/devops-aspnet-core-github-workflow-v2a/MyFirstAzureWebApp/Pages/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWJvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/00-G-Drive-Data/Phd/01. Courses/26. DevOps MS SP2023/Basharat-SP2023/Src/V2a/devops-aspnet-core-github-workflow-v2a/MyFirstAzureWebApp/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
