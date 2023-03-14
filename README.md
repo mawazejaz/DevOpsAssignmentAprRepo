@@ -34,6 +34,8 @@ dotnet new webapp -f net6.0
 
 dotnet run --urls=https://localhost:5001/
 
+git add .
+
 git commit -am "Version 1.0 aspnet core web app added"
 
 git push
