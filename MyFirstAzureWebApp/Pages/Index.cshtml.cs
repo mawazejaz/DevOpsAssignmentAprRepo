@@ -16,4 +16,17 @@ public class IndexModel : PageModel
     {
 
     }
+
+    private readonly IDictionary<string, string> Users = new Dictionary<string, string>()
+    {
+        { "test", "passcode"}
+    };
+
+    public string Authenticate(string userName, string password)
+    {
+        if(!Users.Any(t=> t.Key == userName && t.Value == password))
+            return null;
+
+        return $"Login succeded for user {userName}";
+    }
 }
