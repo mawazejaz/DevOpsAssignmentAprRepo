@@ -21,16 +21,29 @@ namespace MyFirstAzureWebApp.Pages.Tests
         [TestMethod()]
         public void AuthenticateTest_with_correct_credentials_results_successful()
         {
- 
+
             string userName = "test";
             string password = "passcode";
 
-            var result = _indexModel.Authenticate(userName, password);  
+            var result = _indexModel.Authenticate(userName, password);
 
             Assert.IsNotNull(result);
-            Assert.IsTrue(result.Equals($"Login succeded for user {userName}"));
+            Assert.IsTrue(result.Equals($"Login succeeded for user {userName}"));
 
-             //Assert.Fail();
+            //Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void AuthenticateTest_when_I_Provide_wrong_credentials_it_should_fail_or_return_null()
+        {
+            //Assert.Fail();
+            string userName = "test";
+            string password = "passcode_abc!!";
+
+            var result = _indexModel.Authenticate(userName, password);
+
+            Assert.IsNull(result);
+
         }
     }
 }

@@ -27,6 +27,6 @@ public class IndexModel : PageModel
         if(!Users.Any(t=> t.Key == userName && t.Value == password))
             return null;
 
-        return $"Login succeded for user {userName}";
+        return $"Login succeeded for user {userName}";
     }
 }
