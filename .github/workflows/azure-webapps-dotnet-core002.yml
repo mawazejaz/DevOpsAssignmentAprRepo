@@ -86,12 +86,12 @@ jobs:
       - name: Login job
         uses: azure/login@v1
         with:
-          creds: ${{ secrets.SECRET_AZ_CREDENTIALS }}
+          creds: ${{ secrets.SECRET_AZ_CREDENTIALS_V001 }}
     
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
-          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          publish-profile: ${{ secrets.ASPCORE_WEBAPP_PUBLISH_PROFILE_V001 }}
           package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
