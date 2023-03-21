@@ -151,3 +151,25 @@ Follow the steps to create the Azure credentials (Service Principal) :
 1. Create a new secret in your GitHub repo using the copied contents of the publish profile.
 
    ![](images/get-publish-profile.png)
+   
+   # ======================
+   az ad sp create-for-rbac --name "myApp" --role contributor \
+                            --scopes /subscriptions/{subscription-id}/resourceGroups/{resource-group} \
+                            --sdk-auth
+
+
+az ad sp create-for-rbac --name "webapp-demo-riu-ms2023-v001" --role contributor  --scopes /subscriptions/0ff3b063-e340-4ba3-b4bf-935dcfe0e9fc/resourceGroups/webapp-demo-riu-ms2023-v001_group --sdk-auth
+
+
+{
+  "clientId": "-f8db-4db7-a549-d8f773236ae5",
+  "clientSecret": "HTJRO1WgBmTzHKSpR4xchY3K4D~50c-a",
+  "subscriptionId": "-e340-4ba3-b4bf-935dcfe0e9fc",
+  "tenantId": "-f3ca-4e81-b7e3-319f0b105009",
+  "activeDirectoryEndpointUrl": "https://login.microsoftonline.com",
+  "resourceManagerEndpointUrl": "https://management.azure.com/",
+  "activeDirectoryGraphResourceId": "https://graph.windows.net/",
+  "sqlManagementEndpointUrl": "https://management.core.windows.net:8443/",
+  "galleryEndpointUrl": "https://gallery.azure.com/",
+  "managementEndpointUrl": "https://management.core.windows.net/"
+}
