@@ -1,5 +1,4 @@
-# ==================
-# Lecture 2
+# Lecture 1
 # ==================
 
 # devops-aspnet-core-github-workflow-v2a
@@ -78,7 +77,6 @@ git flow feature start f002
 git flow feature finish f001
 git flow feature publish f002
 
-# ==================
 # Lecture 2
 # ==================
 # Set up Secrets in GitHub Action workflows 
