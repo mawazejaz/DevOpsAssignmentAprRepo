@@ -45,5 +45,23 @@ namespace MyFirstAzureWebApp.Pages.Tests
             Assert.IsNull(result);
 
         }
+
+        [TestMethod]
+        public void Add_ByAddingTwoNumbers_returns_sum_of_numbers()
+        {
+            //Arrange
+            var a = 4;
+            var b = 5;
+            //Act
+            var result = _indexModel.Add(a, b);
+            //Assert
+            Assert.AreEqual(11, result);
+        }
+
+        [TestMethod]
+        public void Add_ByAddingTwoNumbers_returns_sum_of_numbers_smart()
+        {
+            Assert.AreEqual(13, _indexModel.Add(6, 7));
+        }
     }
 }

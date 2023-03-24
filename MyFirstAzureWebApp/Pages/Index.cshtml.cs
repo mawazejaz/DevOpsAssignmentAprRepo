@@ -24,9 +24,17 @@ public class IndexModel : PageModel
 
     public string Authenticate(string userName, string password)
     {
-        if(!Users.Any(t=> t.Key == userName && t.Value == password))
+        if (!Users.Any(t => t.Key == userName && t.Value == password))
             return null;
 
         return $"Login succeeded for user {userName}";
     }
+
+    public int Add(int a, int b)
+    {
+        int c = a + b;
+        return c;
+    }
+
+
 }
