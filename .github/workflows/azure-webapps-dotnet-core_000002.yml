@@ -56,6 +56,9 @@ jobs:
         run: dotnet build --configuration Release
         working-directory: "./MyFirstAzureWebApp" # added by BASHARAT
 
+      - name: Test
+        run: dotnet test --no-build --verbosity normal
+      
       - name: dotnet publish
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
         working-directory: "./MyFirstAzureWebApp" # added by BASHARAT
