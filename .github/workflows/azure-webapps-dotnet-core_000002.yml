@@ -56,6 +56,10 @@ jobs:
         run: dotnet build --configuration Release
         working-directory: "./MyFirstAzureWebApp" # added by BASHARAT
 
+      - name: Test
+        run: dotnet test --no-build --verbosity normal
+        working-directory: "./FirstAzureAppTestProject" # added by BASHARAT
+      
       - name: dotnet publish
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
         working-directory: "./MyFirstAzureWebApp" # added by BASHARAT
@@ -82,9 +86,9 @@ jobs:
           name: .net-app
 
       - name: Login job
-        uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS_V002 }}
+      #   uses: azure/login@v1
+      #   with:
+      #     creds: ${{ secrets.AZURE_CREDENTIALS_V002 }}
           
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
