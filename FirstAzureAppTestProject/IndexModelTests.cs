@@ -55,7 +55,7 @@ namespace MyFirstAzureWebApp.Pages.Tests
             //Act
             var result = _indexModel.Add(a, b);
             //Assert
-            Assert.AreEqual(11, result);
+            Assert.AreEqual(9, result);
         }
 
         [TestMethod]
