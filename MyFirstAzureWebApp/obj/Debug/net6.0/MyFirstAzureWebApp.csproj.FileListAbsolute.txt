@@ -7,7 +7,6 @@ F:\00-G-Drive-Data\Phd\01. Courses\26. DevOps MS SP2023\Basharat-SP2023\Src\V2a\
 F:\00-G-Drive-Data\Phd\01. Courses\26. DevOps MS SP2023\Basharat-SP2023\Src\V2a\devops-aspnet-core-github-workflow-v2a\MyFirstAzureWebApp\bin\Debug\net6.0\MyFirstAzureWebApp.dll
 F:\00-G-Drive-Data\Phd\01. Courses\26. DevOps MS SP2023\Basharat-SP2023\Src\V2a\devops-aspnet-core-github-workflow-v2a\MyFirstAzureWebApp\bin\Debug\net6.0\ref\MyFirstAzureWebApp.dll
 F:\00-G-Drive-Data\Phd\01. Courses\26. DevOps MS SP2023\Basharat-SP2023\Src\V2a\devops-aspnet-core-github-workflow-v2a\MyFirstAzureWebApp\bin\Debug\net6.0\MyFirstAzureWebApp.pdb
-F:\00-G-Drive-Data\Phd\01. Courses\26. DevOps MS SP2023\Basharat-SP2023\Src\V2a\devops-aspnet-core-github-workflow-v2a\MyFirstAzureWebApp\obj\Debug\net6.0\MyFirstAzureWebApp.csproj.AssemblyReference.cache
 F:\00-G-Drive-Data\Phd\01. Courses\26. DevOps MS SP2023\Basharat-SP2023\Src\V2a\devops-aspnet-core-github-workflow-v2a\MyFirstAzureWebApp\obj\Debug\net6.0\MyFirstAzureWebApp.GeneratedMSBuildEditorConfig.editorconfig
 F:\00-G-Drive-Data\Phd\01. Courses\26. DevOps MS SP2023\Basharat-SP2023\Src\V2a\devops-aspnet-core-github-workflow-v2a\MyFirstAzureWebApp\obj\Debug\net6.0\MyFirstAzureWebApp.AssemblyInfoInputs.cache
 F:\00-G-Drive-Data\Phd\01. Courses\26. DevOps MS SP2023\Basharat-SP2023\Src\V2a\devops-aspnet-core-github-workflow-v2a\MyFirstAzureWebApp\obj\Debug\net6.0\MyFirstAzureWebApp.AssemblyInfo.cs
