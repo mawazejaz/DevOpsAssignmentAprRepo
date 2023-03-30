@@ -53,7 +53,8 @@ jobs:
             ${{ runner.os }}-nuget-
 
       - name: Build with dotnet 
-        run: dotnet build --configuration Release
+        # run: dotnet build --configuration Release
+        run: dotnet build --configuration TestPublish
         working-directory: "./MyFirstAzureWebApp" # added by BASHARAT
 
       - name: Test # added by BASHARAT
