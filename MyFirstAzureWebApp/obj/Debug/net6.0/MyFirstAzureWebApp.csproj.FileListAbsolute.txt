@@ -1,5 +1,8 @@
 F:\00-G-Drive-Data\Phd\01. Courses\26. DevOps MS SP2023\Basharat-SP2023\Src\V2a\devops-aspnet-core-github-workflow-v2a\MyFirstAzureWebApp\bin\Debug\net6.0\appsettings.Development.json
 F:\00-G-Drive-Data\Phd\01. Courses\26. DevOps MS SP2023\Basharat-SP2023\Src\V2a\devops-aspnet-core-github-workflow-v2a\MyFirstAzureWebApp\bin\Debug\net6.0\appsettings.json
+F:\00-G-Drive-Data\Phd\01. Courses\26. DevOps MS SP2023\Basharat-SP2023\Src\V2a\devops-aspnet-core-github-workflow-v2a\MyFirstAzureWebApp\bin\Debug\net6.0\appsettings.ProductionPublish.json
+F:\00-G-Drive-Data\Phd\01. Courses\26. DevOps MS SP2023\Basharat-SP2023\Src\V2a\devops-aspnet-core-github-workflow-v2a\MyFirstAzureWebApp\bin\Debug\net6.0\appsettings.StagingPublish.json
+F:\00-G-Drive-Data\Phd\01. Courses\26. DevOps MS SP2023\Basharat-SP2023\Src\V2a\devops-aspnet-core-github-workflow-v2a\MyFirstAzureWebApp\bin\Debug\net6.0\appsettings.TestPublish.json
 F:\00-G-Drive-Data\Phd\01. Courses\26. DevOps MS SP2023\Basharat-SP2023\Src\V2a\devops-aspnet-core-github-workflow-v2a\MyFirstAzureWebApp\bin\Debug\net6.0\MyFirstAzureWebApp.staticwebassets.runtime.json
 F:\00-G-Drive-Data\Phd\01. Courses\26. DevOps MS SP2023\Basharat-SP2023\Src\V2a\devops-aspnet-core-github-workflow-v2a\MyFirstAzureWebApp\bin\Debug\net6.0\MyFirstAzureWebApp.exe
 F:\00-G-Drive-Data\Phd\01. Courses\26. DevOps MS SP2023\Basharat-SP2023\Src\V2a\devops-aspnet-core-github-workflow-v2a\MyFirstAzureWebApp\bin\Debug\net6.0\MyFirstAzureWebApp.deps.json
@@ -23,4 +26,3 @@ F:\00-G-Drive-Data\Phd\01. Courses\26. DevOps MS SP2023\Basharat-SP2023\Src\V2a\
 F:\00-G-Drive-Data\Phd\01. Courses\26. DevOps MS SP2023\Basharat-SP2023\Src\V2a\devops-aspnet-core-github-workflow-v2a\MyFirstAzureWebApp\obj\Debug\net6.0\ref\MyFirstAzureWebApp.dll
 F:\00-G-Drive-Data\Phd\01. Courses\26. DevOps MS SP2023\Basharat-SP2023\Src\V2a\devops-aspnet-core-github-workflow-v2a\MyFirstAzureWebApp\obj\Debug\net6.0\MyFirstAzureWebApp.pdb
 F:\00-G-Drive-Data\Phd\01. Courses\26. DevOps MS SP2023\Basharat-SP2023\Src\V2a\devops-aspnet-core-github-workflow-v2a\MyFirstAzureWebApp\obj\Debug\net6.0\MyFirstAzureWebApp.genruntimeconfig.cache
-F:\00-G-Drive-Data\Phd\01. Courses\26. DevOps MS SP2023\Basharat-SP2023\Src\V2a\devops-aspnet-core-github-workflow-v2a\MyFirstAzureWebApp\obj\Debug\net6.0\MyFirstAzureWebApp.csproj.AssemblyReference.cache

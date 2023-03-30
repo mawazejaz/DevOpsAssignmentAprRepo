@@ -1,19 +1,22 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace MyFirstAzureWebApp.Pages;
-
-public class AboutModel : PageModel
+namespace MyFirstAzureWebApp.Pages
 {
-    private readonly ILogger<AboutModel> _logger;
 
-    public AboutModel(ILogger<AboutModel> logger)
+    public class AboutModel : PageModel
     {
-        _logger = logger;
+        private readonly ILogger<AboutModel> _logger;
+
+        public AboutModel(ILogger<AboutModel> logger)
+        {
+            _logger = logger;
+        }
+
+        public void OnGet()
+        {
+
+        }
     }
 
-    public void OnGet()
-    {
-
-    }
 }

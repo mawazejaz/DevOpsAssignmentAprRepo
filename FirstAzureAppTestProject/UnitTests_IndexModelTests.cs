@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 namespace MyFirstAzureWebApp.Pages.Tests
 {
     [TestClass()]
-    public class IndexModelTests
+    public class UnitTests_IndexModelTests
     {
         private readonly IndexModel _indexModel;
 
-        public IndexModelTests()
+        public UnitTests_IndexModelTests()
         {
-            _indexModel = new IndexModel(null);
+            _indexModel = new IndexModel(null, null);
         }
 
         [TestMethod()]
