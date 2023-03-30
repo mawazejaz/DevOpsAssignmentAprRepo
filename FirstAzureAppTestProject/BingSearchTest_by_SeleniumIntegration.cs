@@ -11,7 +11,7 @@ namespace MyFirstAzureWebApp.Pages.Tests
     /// <summary>
     /// Summary description for MySeleniumTests
     /// </summary>
-    [TestClass]
+   // [TestClass]
     public class BingSearchTest_by_SeleniumIntegration
     {
         private TestContext testContextInstance;

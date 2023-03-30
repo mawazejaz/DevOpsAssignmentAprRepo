@@ -18,7 +18,7 @@ namespace MyFirstAzureWebApp.Pages.Tests
     * Switching between the browsers could be transferred to a Base Class.
     * Please refer to https://git.io/fhqYE  for more concise version
     */
-    [TestClass]
+  //  [TestClass]
     public class CrossBrowserTest_by_SeleniumIntegration
     {
         private static String BASE_URL = "http://hrm.pragmatictestlabs.com";

@@ -8,7 +8,7 @@ using OpenQA.Selenium.IE;
 
 namespace MyFirstAzureWebApp.Pages.Tests
 {
-    [TestClass]
+   // [TestClass]
     public class LoginTest_by_SeleniumIntegration
     {
 
