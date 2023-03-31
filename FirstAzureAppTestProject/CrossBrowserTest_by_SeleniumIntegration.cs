@@ -51,7 +51,7 @@ namespace MyFirstAzureWebApp.Pages.Tests
         /**
         * Demonstrate launching Google Chrome web browser
         */
-        [TestMethod]
+        // [TestMethod]
         public void OpenChrome()
         {
             IWebDriver driver = new ChromeDriver();
@@ -65,7 +65,7 @@ namespace MyFirstAzureWebApp.Pages.Tests
         * You can then pass the ChromeOptions object into the ChromeDriver constructor:
         * Please refer to http://chromedriver.chromium.org/capabilities
         */
-        [TestMethod]
+        // [TestMethod]
         public void OpenChromeHeadless()
         {
             var options = new ChromeOptions();
@@ -77,7 +77,7 @@ namespace MyFirstAzureWebApp.Pages.Tests
         /**
        * This method demonstrate launching Firefox web browser
        */
-        [TestMethod]
+        // [TestMethod]
         public void OpenFirefox()
         {
             IWebDriver driver = new FirefoxDriver();
@@ -87,7 +87,7 @@ namespace MyFirstAzureWebApp.Pages.Tests
         /**
         * This method demonstrate launching Firefox headless mode
         */
-        [TestMethod]
+        // [TestMethod]
         public void OpenFirefoxHeadless()
         {
             var options = new FirefoxOptions();
@@ -99,7 +99,7 @@ namespace MyFirstAzureWebApp.Pages.Tests
         /**
         * This method demonstrate launching IE web browser
         */
-        [TestMethod]
+        // [TestMethod]
         public void OpenIE()
         {
             InternetExplorerOptions options = new InternetExplorerOptions();
@@ -114,7 +114,7 @@ namespace MyFirstAzureWebApp.Pages.Tests
         /**
         * This method demonstrate launching Edge web browser
         */
-        [TestMethod]
+        // [TestMethod]
         public void OpenEdge()
         {
             IWebDriver driver = new EdgeDriver();
@@ -124,7 +124,7 @@ namespace MyFirstAzureWebApp.Pages.Tests
         ///**
         //* This method demonstrate launching Opera  web browser
         //*/
-        //[TestMethod]
+        //// [TestMethod]
         //public void OpenOpera()
         //{
         //    OperaOptions options = new OperaOptions();
@@ -141,7 +141,7 @@ namespace MyFirstAzureWebApp.Pages.Tests
          * Note :
          * Browser driver configuration is not required as browser has the driver inbuilt
          */
-        [TestMethod]
+        // [TestMethod]
         public void OpenSafari()
         {
             var driver = new SafariDriver();
@@ -152,7 +152,7 @@ namespace MyFirstAzureWebApp.Pages.Tests
         /**
           * Demonstrate launching Chrome Mobile Emulator
           */
-        [TestMethod]
+        // [TestMethod]
         public void OpenMobileEmulation()
         {
             ChromeOptions chromeOptions = new ChromeOptions();

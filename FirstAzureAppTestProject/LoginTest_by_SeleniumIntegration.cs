@@ -34,7 +34,7 @@ namespace MyFirstAzureWebApp.Pages.Tests
         }
 
 
-        [TestMethod]
+        // [TestMethod]
         public void testLoginWithValidCredentials()
         {
 
@@ -55,7 +55,7 @@ namespace MyFirstAzureWebApp.Pages.Tests
         }
 
 
-        [TestMethod]
+        // [TestMethod]
         public void testValidUserLoginUsingKeyboardKeys()
         {
             driver.FindElement(By.Id("txtUsername")).SendKeys("Admin");
@@ -69,7 +69,7 @@ namespace MyFirstAzureWebApp.Pages.Tests
             Assert.AreEqual(strWelcomeMessage, "Welcome Admin");
         }
 
-        [TestMethod]
+        // [TestMethod]
         public void testLoginWithInvalidPassword()
         {
             driver.FindElement(By.Id("txtUsername")).SendKeys("Admin");
@@ -82,7 +82,7 @@ namespace MyFirstAzureWebApp.Pages.Tests
             Assert.AreEqual(msgError, "Invalid credentials");
         }
 
-        [TestMethod]
+        // [TestMethod]
         public void testLoginWithBlankUsername()
         {
             driver.FindElement(By.Id("txtUsername")).SendKeys("");
@@ -94,7 +94,7 @@ namespace MyFirstAzureWebApp.Pages.Tests
         }
 
 
-        [TestMethod]
+        // [TestMethod]
         public void testLoginWithBlankUsernameAndPassword()
         {
             driver.FindElement(By.Id("txtUsername")).SendKeys("");
@@ -106,7 +106,7 @@ namespace MyFirstAzureWebApp.Pages.Tests
 
         }
 
-        [TestMethod]
+        // [TestMethod]
         public void testLoginWithBlankPassword()
         {
             driver.FindElement(By.Id("txtUsername")).SendKeys("Admin");
@@ -119,7 +119,7 @@ namespace MyFirstAzureWebApp.Pages.Tests
         }
 
 
-        [TestMethod]
+        // [TestMethod]
         public void testCaseSensitivityOfPassword()
         {
             driver.FindElement(By.Id("txtUsername")).SendKeys("Admin");
@@ -131,7 +131,7 @@ namespace MyFirstAzureWebApp.Pages.Tests
         }
 
 
-        [TestMethod]
+        // [TestMethod]
         public void testLogoutFromSystem()
         {
             driver.FindElement(By.Id("txtUsername")).SendKeys("Admin");

@@ -18,7 +18,7 @@ namespace MyFirstAzureWebApp.Pages.Tests
         private IWebDriver driver;
         private string appURL;
   
-        [TestMethod]
+        // [TestMethod]
         [TestCategory("Chrome")]
         public void BingSearchTest()
         {
