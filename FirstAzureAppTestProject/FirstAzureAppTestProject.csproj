@@ -10,6 +10,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="BingSearchTest_by_SeleniumIntegration.cs" />
+    <Compile Remove="CrossBrowserTest_by_SeleniumIntegration.cs" />
+    <Compile Remove="LoginTest_by_SeleniumIntegration.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
     <PackageReference Include="MSTest.TestAdapter" Version="2.2.7" />
     <PackageReference Include="MSTest.TestFramework" Version="2.2.7" />
