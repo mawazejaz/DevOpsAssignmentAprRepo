@@ -33,7 +33,7 @@ permissions:
   contents: read
 
 jobs:
-  build:
+  build_DEV:
     runs-on: ubuntu-latest
 
     steps:
@@ -53,8 +53,7 @@ jobs:
             ${{ runner.os }}-nuget-
 
       - name: Build with dotnet 
-        # run: dotnet build --configuration Release
-        run: dotnet build --configuration TestPublish
+        run: dotnet build --configuration Release
         working-directory: "./MyFirstAzureWebApp" # added by BASHARAT
 
         # - name: Test # added by BASHARAT
@@ -75,7 +74,7 @@ jobs:
     permissions:
       contents: none
     runs-on: ubuntu-latest
-    needs: build
+    needs: build_DEV
     environment:
       name: 'Development'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
@@ -99,87 +98,125 @@ jobs:
           publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE_V002 }}
           package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
 
+  build_TST:
+      runs-on: ubuntu-latest
+      needs: deploy_DEV
+
+      steps:
+        - uses: actions/checkout@v3
+
+        - name: Set up .NET Core
+          uses: actions/setup-dotnet@v2
+          with:
+            dotnet-version: ${{ env.DOTNET_VERSION }}
+
+        - name: Set up dependency caching for faster builds
+          uses: actions/cache@v3
+          with:
+            path: ~/.nuget/packages
+            key: ${{ runner.os }}-nuget-${{ hashFiles('**/packages.lock.json') }}
+            restore-keys: |
+              ${{ runner.os }}-nuget-
+
+        - name: Build with dotnet 
+          run: dotnet build --configuration TestPublish
+          working-directory: "./MyFirstAzureWebApp" # added by BASHARAT
+
+          # - name: Test # added by BASHARAT
+          # run: dotnet test --no-build --verbosity normal # added by BASHARAT
+          # working-directory: "./FirstAzureAppTestProject" # added by BASHARAT
+
+        - name: dotnet publish
+          run: dotnet publish -c TestPublish -o ${{env.DOTNET_ROOT}}/myapp
+          working-directory: "./MyFirstAzureWebApp" # added by BASHARAT
+
+        - name: Upload artifact for deployment job
+          uses: actions/upload-artifact@v3
+          with:
+            name: .net-app
+            path: ${{env.DOTNET_ROOT}}/myapp
+
   deploy_TST:
-    permissions:
-      contents: none
-    runs-on: ubuntu-latest
-    needs: deploy_DEV
-    environment:
-      name: 'Test'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+      permissions:
+        contents: none
+      runs-on: ubuntu-latest
+      needs: build_TST
+      environment:
+        name: 'Test'
+        url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
-    steps:
-      - name: Download artifact from build job
-        uses: actions/download-artifact@v3
-        with:
-          name: .net-app
+      steps:
+        - name: Download artifact from build job
+          uses: actions/download-artifact@v3
+          with:
+            name: .net-app
 
-      - name: Login job
-        uses: azure/login@v1
-        with:
-           creds: ${{ secrets.AZURE_CREDENTIALS_V002 }}
-          
-      - name: Deploy to Azure Web App
-        id: deploy-to-webapp
-        uses: azure/webapps-deploy@v2
-        with:
-          app-name: ${{ env.AZURE_WEBAPP_NAME }}
-          publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE_V002 }}
-          package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+        - name: Login job
+          uses: azure/login@v1
+          with:
+             creds: ${{ secrets.AZURE_CREDENTIALS_V002 }}
+
+        - name: Deploy to Azure Web App
+          id: deploy-to-webapp
+          uses: azure/webapps-deploy@v2
+          with:
+            app-name: ${{ env.AZURE_WEBAPP_NAME }}
+            publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE_V002 }}
+            package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
 
 
   deploy_STG:
-    permissions:
-      contents: none
-    runs-on: ubuntu-latest
-    needs: deploy_TST
-    environment:
-      name: 'Staging'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+      permissions:
+        contents: none
+      runs-on: ubuntu-latest
+      needs: deploy_TST
+      environment:
+        name: 'Staging'
+        url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
-    steps:
-      - name: Download artifact from build job
-        uses: actions/download-artifact@v3
-        with:
-          name: .net-app
+      steps:
+        - name: Download artifact from build job
+          uses: actions/download-artifact@v3
+          with:
+            name: .net-app
 
-      - name: Login job
-        uses: azure/login@v1
-        with:
-           creds: ${{ secrets.AZURE_CREDENTIALS_V002 }}
-          
-      - name: Deploy to Azure Web App
-        id: deploy-to-webapp
-        uses: azure/webapps-deploy@v2
-        with:
-          app-name: ${{ env.AZURE_WEBAPP_NAME }}
-          publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE_V002 }}
-          package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+        - name: Login job
+          uses: azure/login@v1
+          with:
+             creds: ${{ secrets.AZURE_CREDENTIALS_V002 }}
+
+        - name: Deploy to Azure Web App
+          id: deploy-to-webapp
+          uses: azure/webapps-deploy@v2
+          with:
+            app-name: ${{ env.AZURE_WEBAPP_NAME }}
+            publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE_V002 }}
+            package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
  
   deploy_PRD:
-    permissions:
-      contents: none
-    runs-on: ubuntu-latest
-    needs: deploy_STG
-    environment:
-      name: 'Production'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+      permissions:
+        contents: none
+      runs-on: ubuntu-latest
+      needs: deploy_STG
+      environment:
+        name: 'Production'
+        url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
-    steps:
-      - name: Download artifact from build job
-        uses: actions/download-artifact@v3
-        with:
-          name: .net-app
+      steps:
+        - name: Download artifact from build job
+          uses: actions/download-artifact@v3
+          with:
+            name: .net-app
 
-      - name: Login job
-        uses: azure/login@v1
-        with:
-           creds: ${{ secrets.AZURE_CREDENTIALS_V002 }}
-          
-      - name: Deploy to Azure Web App
-        id: deploy-to-webapp
-        uses: azure/webapps-deploy@v2
-        with:
-          app-name: ${{ env.AZURE_WEBAPP_NAME }}
-          publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE_V002 }}
-          package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+        - name: Login job
+          uses: azure/login@v1
+          with:
+             creds: ${{ secrets.AZURE_CREDENTIALS_V002 }}
+
+        - name: Deploy to Azure Web App
+          id: deploy-to-webapp
+          uses: azure/webapps-deploy@v2
+          with:
+            app-name: ${{ env.AZURE_WEBAPP_NAME }}
+            publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE_V002 }}
+            package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
