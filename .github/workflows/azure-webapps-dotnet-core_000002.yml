@@ -57,7 +57,7 @@ jobs:
         run: dotnet build --configuration TestPublish
         working-directory: "./MyFirstAzureWebApp" # added by BASHARAT
 
-      - name: Test # added by BASHARAT
+        # - name: Test # added by BASHARAT
         # run: dotnet test --no-build --verbosity normal # added by BASHARAT
         # working-directory: "./FirstAzureAppTestProject" # added by BASHARAT
       
