@@ -4,8 +4,11 @@ name: Update Twitter banner
 
 # Controls when the workflow will run
 on:
-  schedule: # “Every 30 minutes”
-    - cron: "*/30 * * * *"
+  # schedule: # “Every 30 minutes”
+  #  - cron: "*/30 * * * *"
+  
+ schedule: # “At 12:10am on first day of the month.”
+    - cron: "10 0 1 * *"
     
   # schedule: # “At 17:00 on every day-of-week from Monday through Thursday.”
   #  - cron: "0 17 * * 1-4"
