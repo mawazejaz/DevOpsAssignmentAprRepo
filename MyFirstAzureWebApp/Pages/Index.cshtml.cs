@@ -14,7 +14,6 @@ public class IndexModel : PageModel
         _logger = logger;
         _configuration = configuration;
     }
-
     public void OnGet()
     {
         var environment = _configuration["BuildEnvironment:Name"];
