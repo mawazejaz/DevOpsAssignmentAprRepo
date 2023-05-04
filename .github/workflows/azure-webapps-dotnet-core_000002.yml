@@ -166,7 +166,7 @@ jobs:
 
   build_STG:
       runs-on: ubuntu-latest
-      needs: deploy_DEV
+      needs: deploy_TST
 
       steps:
         - uses: actions/checkout@v3
@@ -232,7 +232,7 @@ jobs:
 
   build_PRD:
       runs-on: ubuntu-latest
-      needs: deploy_DEV
+      needs: deploy_STG
 
       steps:
         - uses: actions/checkout@v3
