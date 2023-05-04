@@ -8,26 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Basharat\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Mawaz\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\00-G-Drive-Data\\Phd\\01. Courses\\26. DevOps MS SP2023\\Basharat-SP2023\\Src\\V2a\\devops-aspnet-core-github-workflow-v2a\\MyFirstAzureWebApp\\MyFirstAzureWebApp.csproj",
+      "projectUniqueName": "C:\\Users\\Mawaz\\Source\\Repos\\devops-aspnet-core-github-workflow-v2a\\MyFirstAzureWebApp\\MyFirstAzureWebApp.csproj",
       "projectName": "MyFirstAzureWebApp",
-      "projectPath": "F:\\00-G-Drive-Data\\Phd\\01. Courses\\26. DevOps MS SP2023\\Basharat-SP2023\\Src\\V2a\\devops-aspnet-core-github-workflow-v2a\\MyFirstAzureWebApp\\MyFirstAzureWebApp.csproj",
-      "packagesPath": "C:\\Users\\Basharat\\.nuget\\packages\\",
-      "outputPath": "F:\\00-G-Drive-Data\\Phd\\01. Courses\\26. DevOps MS SP2023\\Basharat-SP2023\\Src\\V2a\\devops-aspnet-core-github-workflow-v2a\\MyFirstAzureWebApp\\obj\\",
+      "projectPath": "C:\\Users\\Mawaz\\Source\\Repos\\devops-aspnet-core-github-workflow-v2a\\MyFirstAzureWebApp\\MyFirstAzureWebApp.csproj",
+      "packagesPath": "C:\\Users\\Mawaz\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Mawaz\\Source\\Repos\\devops-aspnet-core-github-workflow-v2a\\MyFirstAzureWebApp\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Basharat\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Mawaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -35,8 +28,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
@@ -59,7 +51,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -71,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
