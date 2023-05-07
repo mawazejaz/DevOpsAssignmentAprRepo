@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SnVOav0Rl48cCpuoN/nYE6JO7VbEqbCcL3PQXCAHrTSt0YIV5AeGq4VIvJJ0PHrCIwigLYUFdDDQxbOzQe+hSQ==",
+  "dgSpecHash": "9BGDeAX0LKP167iZ2uDZy/YLM/8Xnq9PUmkruPqgvumz/0uMX6a4mSAmHNVmtkIzuSM3jqVd8Gs2EICFHIF32Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mawaz\\Source\\Repos\\devops-aspnet-core-github-workflow-v2a\\MyFirstAzureWebApp\\MyFirstAzureWebApp.csproj",
+  "projectFilePath": "C:\\Users\\Mawaz\\source\\repos\\devops-aspnet-core-github-workflow-v2a\\MyFirstAzureWebApp\\MyFirstAzureWebApp.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
