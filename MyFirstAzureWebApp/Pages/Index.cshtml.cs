@@ -1,5 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.Extensions.Hosting;
+using System;
+using System.Xml.Linq;
 
 namespace MyFirstAzureWebApp.Pages;
 
@@ -18,9 +21,25 @@ public class IndexModel : PageModel
     {
         var environment = _configuration["BuildEnvironment:Name"];
         ViewData["environment"] = environment;
-    }
+		ViewData["name"] = "";
+		ViewData["semester"] = "";
+	}
 
-    private readonly IDictionary<string, string> Users = new Dictionary<string, string>()
+	public async Task<IActionResult> OnPostAsync()
+	{
+		var environment = _configuration["BuildEnvironment:Name"];
+		ViewData["environment"] = environment;
+
+		string name = Request.Form["name"];
+		string semester = Request.Form["semester"];
+
+		ViewData["name"] = name;
+		ViewData["semester"] = semester;
+
+		return Page();
+	}
+
+	private readonly IDictionary<string, string> Users = new Dictionary<string, string>()
     {
         { "test", "passcode"}
     };

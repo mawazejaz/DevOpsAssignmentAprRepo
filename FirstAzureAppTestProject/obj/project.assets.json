@@ -6098,11 +6098,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mawaz\\Source\\Repos\\devops-aspnet-core-github-workflow-v2a\\FirstAzureAppTestProject\\FirstAzureAppTestProject.csproj",
+      "projectUniqueName": "C:\\Users\\Mawaz\\source\\repos\\devops-aspnet-core-github-workflow-v2a\\FirstAzureAppTestProject\\FirstAzureAppTestProject.csproj",
       "projectName": "FirstAzureAppTestProject",
-      "projectPath": "C:\\Users\\Mawaz\\Source\\Repos\\devops-aspnet-core-github-workflow-v2a\\FirstAzureAppTestProject\\FirstAzureAppTestProject.csproj",
+      "projectPath": "C:\\Users\\Mawaz\\source\\repos\\devops-aspnet-core-github-workflow-v2a\\FirstAzureAppTestProject\\FirstAzureAppTestProject.csproj",
       "packagesPath": "C:\\Users\\Mawaz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mawaz\\Source\\Repos\\devops-aspnet-core-github-workflow-v2a\\FirstAzureAppTestProject\\obj\\",
+      "outputPath": "C:\\Users\\Mawaz\\source\\repos\\devops-aspnet-core-github-workflow-v2a\\FirstAzureAppTestProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Mawaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6119,8 +6119,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Mawaz\\Source\\Repos\\devops-aspnet-core-github-workflow-v2a\\MyFirstAzureWebApp\\MyFirstAzureWebApp.csproj": {
-              "projectPath": "C:\\Users\\Mawaz\\Source\\Repos\\devops-aspnet-core-github-workflow-v2a\\MyFirstAzureWebApp\\MyFirstAzureWebApp.csproj"
+            "C:\\Users\\Mawaz\\source\\repos\\devops-aspnet-core-github-workflow-v2a\\MyFirstAzureWebApp\\MyFirstAzureWebApp.csproj": {
+              "projectPath": "C:\\Users\\Mawaz\\source\\repos\\devops-aspnet-core-github-workflow-v2a\\MyFirstAzureWebApp\\MyFirstAzureWebApp.csproj"
             }
           }
         }
